@@ -1,0 +1,139 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom Navbar Styles
+@import 'navbar';
+
+// Override Bootstrap navbar styles
+.navbar {
+  padding: 0;
+  background-color: #222;
+
+  .navbar-brand {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding: 0.5rem 1rem;
+      color: #fff !important;
+      &:hover {
+        color: #ccc !important;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: 1rem;
+    border-color: rgba(255,255,255,0.1);
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      &.mx-auto {
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    background-color: #222;
+    border: 1px solid rgba(255,255,255,0.1);
+    
+    .dropdown-item {
+      color: #fff;
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Ensure proper spacing in the main content area
+main.py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+// Post styles
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-body {
+      padding: 1.5rem;
+  }
+
+  .card-title {
+      margin-bottom: 0.75rem;
+      
+      a {
+          color: #333;
+          text-decoration: none;
+          
+          &:hover {
+              color: #007bff;
+          }
+      }
+  }
+
+  img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+}
+
+// Pagination styles
+.pagination {
+  margin-top: 2rem;
+  
+  .page-link {
+      color: #333;
+      border: 1px solid #dee2e6;
+      
+      &:hover {
+          background-color: #f8f9fa;
+          border-color: #dee2e6;
+      }
+  }
+  
+  .page-item.active .page-link {
+      background-color: #007bff;
+      border-color: #007bff;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .card {
+      .card-body {
+          padding: 1rem;
+      }
+      
+      img {
+          margin-bottom: 1rem;
+      }
+  }
+}

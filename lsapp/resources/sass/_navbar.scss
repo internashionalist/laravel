@@ -1,0 +1,137 @@
+// Variables
+$navbar-bg: #222;
+$navbar-text: #fff;
+$navbar-link-hover: #ccc;
+$navbar-height: 50px;
+$navbar-padding: 0 15px;
+
+// Navbar styling
+.navbar {
+  background-color: $navbar-bg;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  padding: $navbar-padding;
+  color: $navbar-text;
+  
+
+  .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $navbar-text;
+    text-decoration: none;
+    margin-right: 20px;
+    
+    &:hover {
+      color: $navbar-link-hover;
+    }
+  }
+  
+
+  .navbar-toggler {
+    display: none;
+    
+    @media (max-width: 768px) {
+      display: block;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 5px 10px;
+      color: $navbar-text;
+      cursor: pointer;
+    }
+  }
+  
+  // Main navigation container
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: $navbar-height;
+      left: 0;
+      width: 100%;
+      background-color: $navbar-bg;
+      z-index: 1000;
+      
+      &.show {
+        display: flex;
+      }
+    }
+    
+    // Navigation items
+    li {
+      position: relative;
+      
+      // All links in navbar
+      a {
+        display: block;
+        color: $navbar-text;
+        text-decoration: none;
+        padding: 0 15px;
+        line-height: $navbar-height;
+        
+        &:hover {
+          color: $navbar-link-hover;
+        }
+      }
+      
+      // Dropdown styling
+      &.dropdown {
+        position: relative;
+        
+        .dropdown-toggle::after {
+          content: " ▾";
+          font-size: 0.75em;
+          vertical-align: middle;
+        }
+        
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: $navbar-bg;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          min-width: 160px;
+          z-index: 1000;
+          
+          li {
+            width: 100%;
+            
+            a {
+              padding: 10px 15px;
+              line-height: 1.5;
+            }
+          }
+        }
+        
+        &:hover .dropdown-menu {
+          display: block;
+        }
+      }
+    }
+  }
+  
+  // User menu (right side)
+  .navbar-user {
+    margin-left: auto;
+    
+    .dropdown-toggle {
+      cursor: pointer;
+    }
+  }
+}
+
+
+.navbar-collapse.show {
+  .navbar-nav {
+    display: flex;
+  }
+}
