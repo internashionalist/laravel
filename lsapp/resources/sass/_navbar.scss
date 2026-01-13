@@ -1,9 +1,10 @@
 // Variables
-$navbar-bg: #222;
-$navbar-text: #fff;
-$navbar-link-hover: #ccc;
+$navbar-bg: #0b1c2d; // dark blue
+$navbar-text: #e9eef5;
+$navbar-link-hover: #9fb7d3;
 $navbar-height: 50px;
 $navbar-padding: 0 15px;
+$navbar-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
 // Navbar styling
 .navbar {
@@ -13,6 +14,8 @@ $navbar-padding: 0 15px;
   align-items: center;
   padding: $navbar-padding;
   color: $navbar-text;
+  font-family: $navbar-font;
+  letter-spacing: 0.04em;
   
 
   .navbar-brand {
@@ -21,6 +24,7 @@ $navbar-padding: 0 15px;
     color: $navbar-text;
     text-decoration: none;
     margin-right: 20px;
+    text-transform: lowercase;
     
     &:hover {
       color: $navbar-link-hover;
@@ -74,9 +78,18 @@ $navbar-padding: 0 15px;
         text-decoration: none;
         padding: 0 15px;
         line-height: $navbar-height;
+        text-transform: lowercase;
         
         &:hover {
           color: $navbar-link-hover;
+        }
+      }
+      
+      @media (min-width: 769px) {
+        &:not(:last-child) a::after {
+          content: " |";
+          color: rgba(233, 238, 245, 0.4);
+          margin-left: 8px;
         }
       }
       

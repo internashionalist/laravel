@@ -4,8 +4,5 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - laravel_app:/var/www/html
+      - ./lsapp:/var/www/html
     command: ["bash", "-lc", "sleep infinity"]
-
-volumes:
-  laravel_app:
