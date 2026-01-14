@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 text-center">
-            <img src="{{ asset('storage/Laravel.png') }}" alt="Laravel Logo" class="img-fluid mb-4" style="max-width: 300px;">
+            <img src="{{ asset('public/laravel_logo.png') }}" alt="Laravel Logo" class="img-fluid mb-4" style="max-width: 300px;">
             
             @if(isset($title))
                 <h1 class="mb-4">{{$title}}</h1>

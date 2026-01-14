@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -16,7 +15,7 @@
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'LSAPP') }}
+                    {{ strtolower(config('app.name', 'lsapp')) }}
                 </a>
                 <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
                     <span class="navbar-toggler-icon"></span>
@@ -25,21 +24,21 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <!-- Main navigation items -->
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/services') }}">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/posts') }}">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/services') }}">services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/posts') }}">blog</a></li>
                     </ul>
 
                     <!-- User authentication section -->
                     <ul class="navbar-nav">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                <a class="nav-link" href="{{ route('login') }}">login</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                    <a class="nav-link" href="{{ route('register') }}">register</a>
                                 </li>
                             @endif
                         @else
@@ -49,11 +48,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                                    <a class="dropdown-item" href="{{ url('/dashboard') }}">dashboard</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                                        Logout
+                                        logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 // Variables
 @import 'variables';
@@ -9,60 +9,6 @@
 
 // Custom Navbar Styles
 @import 'navbar';
-
-// Override Bootstrap navbar styles
-.navbar {
-  padding: 0;
-  background-color: #222;
-
-  .navbar-brand {
-    color: #fff;
-    padding: 0.5rem 1rem;
-    &:hover {
-      color: #ccc;
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      padding: 0.5rem 1rem;
-      color: #fff !important;
-      &:hover {
-        color: #ccc !important;
-      }
-    }
-  }
-
-  .navbar-toggler {
-    margin-right: 1rem;
-    border-color: rgba(255,255,255,0.1);
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-  }
-
-  .navbar-collapse {
-    .navbar-nav {
-      &.mx-auto {
-        margin-right: auto !important;
-        margin-left: auto !important;
-      }
-    }
-  }
-
-  .dropdown-menu {
-    background-color: #222;
-    border: 1px solid rgba(255,255,255,0.1);
-    
-    .dropdown-item {
-      color: #fff;
-      &:hover {
-        background-color: #333;
-        color: #fff;
-      }
-    }
-  }
-}
 
 // Ensure proper spacing in the main content area
 main.py-4 {
