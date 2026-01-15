@@ -12,29 +12,30 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10 text-center">
-        <div class="card shadow">
-          <div class="card-body">
-            <img src="{{ asset('laravel_logo.png') }}" alt="Laravel Logo" class="img-fluid mb-4" style="max-width: 300px;">
-            
+        
+        <img src="{{ asset('laravel_logo.png') }}" alt="Laravel Logo" class="img-fluid mb-4" style="max-width: 300px;">
+        
+        <div class="card shadow mb-4 d-inline-block">
+          <div class="card-body px-4 py-3">
             @if(isset($title))
-                <h1 class="mb-4">{{$title}}</h1>
+                <h1 class="mb-2">{{$title}}</h1>
             @endif
             
-            <p class="mb-4">This is the Laravel application from the "Laravel From Scratch" Youtube series.</p>
-            
-            <div class="mb-4 mx-auto" style="max-width: 960px;">
-                <div class="card shadow">
-                    <div class="card-body p-0">
-                        <iframe
-                            src="https://www.youtube.com/embed/EU7PRmCpx-0?autoplay=1&list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-"
-                            style="width: 100%; height: 540px; border: 0; display: block;"
-                            allowfullscreen
-                            allow="autoplay">
-                        </iframe>
-                    </div>
+            <p class="mb-0">This is the Laravel application from the "Laravel From Scratch" Youtube series.</p>
+          </div>
+        </div>
+        
+        <div class="mb-4 mx-auto" style="max-width: 960px;">
+            <div class="card shadow">
+                <div class="card-body p-0">
+                    <iframe
+                        src="https://www.youtube.com/embed/EU7PRmCpx-0?autoplay=1&list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-"
+                        style="width: 100%; height: 540px; border: 0; display: block;"
+                        allowfullscreen
+                        allow="autoplay">
+                    </iframe>
                 </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
