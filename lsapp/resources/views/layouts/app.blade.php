@@ -9,6 +9,18 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <style>
+      .page-shell {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      .page-card {
+        background: #ffffff;
+        border: 2px solid rgba(10, 42, 79, 0.22);
+        border-radius: 18px;
+        box-shadow: 0 18px 50px rgba(10, 42, 79, 0.10);
+        padding: 2rem 2rem 2.25rem;
+      }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -66,10 +78,12 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 page-shell">
             <div class="container">
-                @include('inc.messages')
-                @yield('content')
+                <div class="page-card">
+                    @include('inc.messages')
+                    @yield('content')
+                </div>
             </div>
         </main>
     </div>

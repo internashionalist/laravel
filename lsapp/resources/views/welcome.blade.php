@@ -18,6 +18,38 @@
             body {
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             }
+
+            :root {
+                --accent: #0a2a4f;
+                --accent-2: #08315e;
+                --accent-border: rgba(10, 42, 79, 0.22);
+            }
+
+            .welcome-card {
+                border: 2px solid var(--accent-border) !important;
+                border-radius: 18px !important;
+                box-shadow: 0 18px 50px rgba(10, 42, 79, 0.10) !important;
+            }
+
+            /* Make the internal divider lines feel more “intentional” */
+            .welcome-card .border-t {
+                border-top-width: 2px !important;
+                border-top-color: rgba(10, 42, 79, 0.18) !important;
+            }
+            .welcome-card .md\:border-l {
+                border-left-width: 2px !important;
+                border-left-color: rgba(10, 42, 79, 0.18) !important;
+            }
+
+            /* Dark-blue accent links + thicker underline */
+            .welcome-card a.underline {
+                color: var(--accent) !important;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 3px;
+            }
+            .welcome-card a.underline:hover {
+                color: var(--accent-2) !important;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -45,7 +77,7 @@
                     </svg>
                 </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg welcome-card">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">
