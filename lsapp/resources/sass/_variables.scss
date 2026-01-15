@@ -3,5 +3,40 @@ $body-bg: #f8fafc;
 
 // Typography
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$font-size-base: 0.95rem;
+$line-height-base: 1.65;
+
+// Brand / Accent
+$primary: #0a2a4f;
+$secondary: #08315e;
+
+// Borders & Radius (thicker, softer)
+$border-width: 2px;
+$border-radius: 0.9rem;
+$border-radius-lg: 1.1rem;
+$border-radius-sm: 0.6rem;
+
+// Cards
+$card-border-width: 2px;
+$card-border-radius: 1.1rem;
+$card-border-color: rgba(10, 42, 79, 0.22);
+$card-cap-bg: rgba(10, 42, 79, 0.06);
+
+// Forms
+$input-border-width: 2px;
+$input-border-radius: 0.7rem;
+$input-focus-border-color: $primary;
+
+// Buttons
+$btn-border-width: 2px;
+$btn-border-radius: 0.75rem;
+
+// Tables
+$table-border-width: 2px;
+
+// Navbar
+$navbar-light-color: rgba(10, 42, 79, 0.85);
+$navbar-light-hover-color: #0a2a4f;
+$navbar-light-active-color: #0a2a4f;
+$navbar-light-brand-color: #0a2a4f;
+$navbar-light-brand-hover-color: #08315e;
