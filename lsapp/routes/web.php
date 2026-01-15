@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 // });
 // Dynamic value / parameter 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
